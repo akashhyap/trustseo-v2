@@ -1,7 +1,6 @@
 import { gql } from "@apollo/client";
 import client from "client";
 import { cleanAndTransformBlocks } from "./cleanAndTransformBlocks";
-import { mapmainMenuItems } from "./mapMainMenuItems";
 import { getLatestPosts } from "../pages/api/posts";
 
 export const getPageStaticProps = async (context) => {
@@ -119,9 +118,6 @@ export const getPageStaticProps = async (context) => {
     props: {
       siteLogo,
       featuredImage,
-      mainMenuItems: mapmainMenuItems(
-        data.acfOptionsMainMenu.menuOptions.menuItems
-      ),
       homePageIntro,
       homePageImage,
       freeConsultationLabel,

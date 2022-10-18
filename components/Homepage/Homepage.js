@@ -9,6 +9,7 @@ import { Footer } from "components/Footer";
 export const Homepage = ({data}) => {
   const scrollPosition = useScrollPosition();
 
+  console.log("HOME", data);
   return (
     <>
      <div className="homepage">

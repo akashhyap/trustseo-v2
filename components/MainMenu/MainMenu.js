@@ -14,13 +14,6 @@ export const MainMenu = ({ siteLogo, menu }) => {
             </Link>
           </div>
         ))}
-        {/* {(items || []).map((item) => (
-          <div key={item.id} className="menu_item relative group">
-            <Link href={item.destination} passHref>
-              <a className="px-5">{item.label}</a>
-            </Link>
-          </div>
-        ))} */}
       </div>
     </div>
   );
