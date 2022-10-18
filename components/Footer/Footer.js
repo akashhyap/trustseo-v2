@@ -3,7 +3,7 @@ import Link from "next/link";
 export const Footer = ({footerMenus}) => {
 //   console.log("MENU Footer", footerMenus);
   return (
-    <footer className="bg-slate-800">
+    <footer className="bg-slate-800 py-4">
       <div className="container mx-auto px-10 flex items-center text-white">
         <div className="flex flex-1 justify-end">
           {footerMenus.edges.map((item) => (

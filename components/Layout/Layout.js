@@ -6,7 +6,7 @@ import { Footer } from "components/Footer";
 import { PageWrapper } from "Context/Page";
 
 export const Layout = (data) => {
-  console.log("DATA", data);
+  // console.log("DATA", data);
   const router = useRouter();
 
   const scrollPosition = useScrollPosition();

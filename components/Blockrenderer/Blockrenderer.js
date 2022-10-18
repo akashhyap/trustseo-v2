@@ -10,18 +10,21 @@ export const Blockrenderer = ({ blocks }) => {
   // console.log("blocks==>", blocks);
 
   return blocks.map((block) => {
+    // console.log("PARA", block);
     switch (block.name) {
       case "core/paragraph": {
-        return <Paragraph key={block.id} content={block.attributes.content} />;
+        return <Paragraph key={block.id} content={block.attributes.content} cssClass={block.attributes.className}/>;
       }
       case "core/heading": {
-        // console.log("heading", block.saveContent);
+        // console.log("heading", block);
         return (
           <Heading
             key={block.id}
             level={block.attributes.level}
             content={block.attributes.content}
-            allContent={block.saveContent}
+            textAlign={block.attributes.textAlign}
+            style={block.attributes.style}
+            cssClass={block.attributes.className}
           />
         );
       }
@@ -33,30 +36,43 @@ export const Blockrenderer = ({ blocks }) => {
         );
       }
       case "core/columns": {
+       
+        const cssClass = block.attributes.className
+
+        //  console.log("blocks cssClass==>", cssClass);
+
         return (
           <Columns
             key={block.id}
             isStackOnMobile={block.attributes.isStackOnMobile}
+            cssClass={cssClass}
           >
-            <Blockrenderer blocks={block.innerBlocks} />
+            <Blockrenderer key={block.id} blocks={block.innerBlocks} />
           </Columns>
         );
       }
       case "core/column": {
+        // console.log("blocks==>", blocks);
         return (
-          <Column key={block.id} width={block.attributes.width}>
-            <Blockrenderer blocks={block.innerBlocks} />
+          <Column
+            key={block.id}
+            width={block.attributes.width}
+          >
+            <Blockrenderer key={block.id} blocks={block.innerBlocks} />
           </Column>
         );
       }
       case "core/group":
       case "core/block": {
-        return <Blockrenderer blocks={block.innerBlocks} />;
+        return <Blockrenderer key={block.id} blocks={block.innerBlocks} />;
       }
 
       case "core/list": {
         return (
-          <div key={block.id} dangerouslySetInnerHTML={{ __html: block.saveContent }}></div>
+          <div
+            key={block.id}
+            dangerouslySetInnerHTML={{ __html: block.saveContent }}
+          ></div>
         );
       }
 
@@ -72,10 +88,7 @@ export const Blockrenderer = ({ blocks }) => {
         );
       }
       case "acf/postarchive": {
-        
-        return (
-          <PostArchive key={block.id} />
-        );
+        return <PostArchive key={block.id} />;
       }
 
       default:

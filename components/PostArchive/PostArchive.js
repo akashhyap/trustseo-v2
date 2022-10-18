@@ -5,7 +5,7 @@ import Link from "next/link";
 export const PostArchive = () => {
   const { posts } = usePageContext();
 
-  console.log("POSTS", posts);
+  // console.log("POSTS", posts);
 
   return (
     <div className="grid grid-cols-3 gap-5 mb-10">

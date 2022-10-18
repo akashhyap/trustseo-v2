@@ -63,6 +63,9 @@ export const getPageStaticProps = async (context) => {
             homepageIntroImage {
               sourceUrl
             }
+            homePageImageAdvance {
+              sourceUrl
+            }
             freeConsultationLabel
             freeConsultationLink {
               ... on Page {
@@ -107,6 +110,7 @@ export const getPageStaticProps = async (context) => {
   const siteLogo = data.acfOptionsMainMenu.menuOptions.siteLogo;
   const homePageIntro = data.acfOptionsMainMenu.menuOptions.homepageIntroText;
   const homePageImage = data.acfOptionsMainMenu.menuOptions.homepageIntroImage;
+  const homePageImageAdvance = data.acfOptionsMainMenu.menuOptions.homePageImageAdvance;
   const freeConsultationLabel =
     data.acfOptionsMainMenu.menuOptions.freeConsultationLabel;
   const freeConsultationLink =
@@ -120,6 +124,7 @@ export const getPageStaticProps = async (context) => {
       featuredImage,
       homePageIntro,
       homePageImage,
+      homePageImageAdvance,
       freeConsultationLabel,
       freeConsultationLink,
       blocks,

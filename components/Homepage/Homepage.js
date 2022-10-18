@@ -9,7 +9,7 @@ import { Footer } from "components/Footer";
 export const Homepage = ({data}) => {
   const scrollPosition = useScrollPosition();
 
-  console.log("HOME", data);
+  // console.log("HOME", data);
   return (
     <>
      <div className="homepage">
@@ -40,16 +40,17 @@ export const Homepage = ({data}) => {
           <div className="basis-1/2 relative">
             <Image
               alt="header image"
-              src={data.homePageImage.sourceUrl}
+              src={data.homePageImageAdvance.sourceUrl || data.homePageImage.sourceUrl}
               layout="responsive"
               width={610}
               height={648}
+              loading="lazy"
             />
           </div>
         </div>
       </header>
 
-      <main>
+      <main className="container mx-auto">
         <Blockrenderer blocks={data.blocks} />
       </main>
     </div>

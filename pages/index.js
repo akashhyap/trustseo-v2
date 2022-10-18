@@ -3,7 +3,7 @@ import { Homepage } from "components/Homepage";
 import { getPageStaticProps } from "utils/getPageStaticProps";
 import { useRouter } from "next/router";
 import Head from "next/head";
-import { Footer } from "components/Footer";
+
 
 export default function Home(props) {
   const router = useRouter();

@@ -18,7 +18,16 @@
 
 body {
     font-family: 'Questrial', sans-serif;
-    font-size: 18px;
+    font-size: 22px;
+}
+
+body p {
+    color: #676767;
+}
+
+
+.custom-site-width {
+    max-width: 1024px;
 }
 
 @media (min-width:1399px) and (max-width:1536px) {
@@ -178,9 +187,11 @@ h2 .rank-no-1 {
     h1 .your {
         font-size: 100px;
     }
+
     h1 .local {
         font-size: 100px;
     }
+
     h1 .las-vegas {
         font-size: 115px;
     }
@@ -223,6 +234,46 @@ h2 .rank-no-1 {
         max-width: 80%;
     }
 }
+
 .scroll_style .sitelogo {
-    padding: 5px!important;
+    padding: 5px !important;
+}
+
+.intro_warning_text {
+    font-size: 45px;
+    line-height: 55px;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+
+.company_logos>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.company_logos>div>span {
+    flex: 0 0 1;
+    min-width: 136px;
+    margin: 0 20px !important;
+}
+
+.company_logos>div span img {
+    max-height: 46px;
+    max-width: 100%;
+}
+
+.hm-h-sz {
+    font-size: 45px;
+}
+
+.hm-h-sz.hm-h-lh {
+    line-height: 74px;
+}
+
+.p-line-height-lg {
+    line-height: 40px;
+}
+.home-content p.margin-custom {
+    margin-top: 30px;
 }
