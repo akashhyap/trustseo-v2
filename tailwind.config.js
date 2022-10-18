@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         heading: ["Aboreto", "cursive"],
-        body: ["Poppins", "sans-serif"],
+        body: ["Questrial", "sans-serif"],
       },
     },
   },
