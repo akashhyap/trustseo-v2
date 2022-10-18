@@ -40,7 +40,7 @@ export const Homepage = ({data}) => {
           <div className="basis-1/2 relative">
             <Image
               alt="header image"
-              src={data.homePageImageAdvance.sourceUrl || data.homePageImage.sourceUrl}
+              src={data.homePageImage.sourceUrl}
               layout="responsive"
               width={610}
               height={648}
