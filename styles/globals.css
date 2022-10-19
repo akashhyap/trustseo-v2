@@ -15,6 +15,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+    overflow-x: hidden;
+}
 
 body {
     font-family: 'Questrial', sans-serif;
@@ -183,6 +187,34 @@ h2 .rank-no-1 {
     text-transform: uppercase;
 }
 
+@media screen and (max-width: 767px) {
+
+    h1 .your,
+    h1 .local {
+        font-size: 3.2rem;
+    }
+
+    h1 .las-vegas {
+        font-size: 3.66rem;
+    }
+
+    h1 .seo-experts {
+        font-size: 3rem;
+    }
+
+    h2.splash-h2 {
+        line-height: 58px;
+    }
+
+    h2 .we-help-you {
+        font-size: 2.85rem;
+    }
+
+    h2 .rank-no-1 {
+        font-size: 3.4rem;
+    }
+}
+
 @media screen and (min-width: 2180px) {
     h1 .your {
         font-size: 100px;
@@ -247,12 +279,48 @@ h2 .rank-no-1 {
 }
 
 .scroll_style .logo_wrapper {
-    padding: 5px 0;
+    padding: 8px 0;
     transition: all ease-out .3s;
 }
 
 .scroll_style_after .logo_wrapper {
     flex-basis: 4.4rem;
+}
+
+@media (max-width:767px) {
+    .logo_wrapper .sitelogo {
+        display: block;
+        max-width: 64px;
+    }
+}
+
+/* .toggle_icon {
+    float: right;
+} */
+
+.toggle_icon:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.menu_wrapper .toggle_icon {
+    height: 64px;
+    float: none;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@media screen and (max-width:787px) {
+    .menu_wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #1e293be6;
+        width: 100%;
+        height: 100%;
+        transition: all ease-out .3s;
+    }
 }
 
 .scroll_style_after {
@@ -281,10 +349,27 @@ h2 .rank-no-1 {
     margin-bottom: 3rem;
 }
 
+@media screen and (max-width:767px) {
+    .intro_warning_text {
+        font-size: 28px;
+        line-height: 32px;
+        margin-top: 2.5rem;
+    }
+}
+
 .company_logos>div {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media screen and (max-width:767px) {
+    .company_logos>div {
+        flex-wrap: wrap;
+        flex: 1;
+        margin-bottom: 0!important;
+        padding: 15px!important;
+    }
 }
 
 .company_logos>div>span {
@@ -304,6 +389,16 @@ h2 .rank-no-1 {
 
 .hm-h-sz.hm-h-lh {
     line-height: 74px;
+}
+
+@media screen and (max-width:767px) {
+    .hm-h-sz.hm-h-lh {
+        line-height: 38px;
+    }
+
+    .hm-h-sz {
+        font-size: 28px;
+    }
 }
 
 .p-line-height-lg {

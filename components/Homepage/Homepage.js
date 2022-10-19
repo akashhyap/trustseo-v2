@@ -42,13 +42,13 @@ export const Homepage = ({ data }) => {
             />
           </div>
           <div className="container mx-auto px-10 flex flex-row justify-between">
-            <div className="basis-1/2 max-w-[40%] self-center text-justify">
+            <div className="mt-8 md:mt-0 mb-10 basis-full md:basis-1/2 max-w-full md:max-w-[40%] self-center text-center md:text-justify">
               <div
                 className="mb-10"
                 dangerouslySetInnerHTML={{ __html: data.homePageIntro }}
               ></div>
               <Link href={data.freeConsultationLink.uri} passHref>
-                <a className="inline-flex items-center bg-transparent transition-all duration-150 hover:bg-slate-800 text-white-700 hover:text-white py-4 px-4 border border-white-500 hover:border-transparent rounded">
+                <a className="text-[18px] md:text-[22px] inline-flex items-center bg-transparent transition-all duration-150 hover:bg-slate-800 text-white-700 hover:text-white py-4 px-4 border border-white-500 hover:border-transparent rounded">
                   {data.freeConsultationLabel}{" "}
                   <span className="ml-2">
                     <FaArrowRight />
@@ -57,7 +57,7 @@ export const Homepage = ({ data }) => {
               </Link>
             </div>
 
-            <div className="basis-1/2 relative">
+            <div className="basis-1/2 relative hidden md:block">
               <Image
                 alt="header image"
                 src={data.homePageImage.sourceUrl}
@@ -70,7 +70,7 @@ export const Homepage = ({ data }) => {
           </div>
         </header>
 
-        <main className="container mx-auto">
+        <main className="container mx-auto px-4 md:px-0">
           <Blockrenderer blocks={data.blocks} />
         </main>
       </div>
