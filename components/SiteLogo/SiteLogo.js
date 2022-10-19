@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+
 export const SiteLogo = ({ logoSrc }) => {
   return (
-    <div className="basis-20">
+    <div className="basis-20 logo_wrapper">
       <Link href="/" passHref>
         <a>
           <Image

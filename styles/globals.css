@@ -235,9 +235,44 @@ h2 .rank-no-1 {
     }
 }
 
-.scroll_style .sitelogo {
-    padding: 5px !important;
+/* .scroll_style .mainMenu .basis-20{
+    flex-basis: 4rem!important;
+} */
+
+/* .scroll_style .menu_item a{
+    font-size: 20px;
+} */
+.scroll_style {
+    transition: all ease-out .3s;
 }
+
+.scroll_style .logo_wrapper {
+    padding: 5px 0;
+    transition: all ease-out .3s;
+}
+
+.scroll_style_after .logo_wrapper {
+    flex-basis: 4.4rem;
+}
+
+.scroll_style_after {
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: #1e293b;
+    z-index: 9999;
+    overflow: visible;
+}
+
+.scroll_style .menu_item a {
+    transition: all ease-out .3s;
+}
+
+.scroll_style_after .menu_item a {
+    font-size: 21px;
+}
+
 
 .intro_warning_text {
     font-size: 45px;
@@ -274,6 +309,7 @@ h2 .rank-no-1 {
 .p-line-height-lg {
     line-height: 40px;
 }
+
 .home-content p.margin-custom {
     margin-top: 30px;
 }
