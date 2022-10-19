@@ -5,7 +5,7 @@ export const Footer = ({footerMenus}) => {
   return (
     <footer className="bg-slate-800 py-4">
       <div className="container mx-auto px-10 flex items-center text-white">
-        <div className="flex flex-1 justify-end">
+        <div className="flex flex-1 justify-center md:justify-end flex-wrap">
           {footerMenus.edges.map((item) => (
             <div key={item.node.id} className="menu_item relative group">
               <Link href={item.node.path} passHref>
