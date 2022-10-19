@@ -23,8 +23,8 @@ export const PostArchive = () => {
                       objectFit="cover"
                     />
                   </div>
-                  <div key={post.databaseId}>
-                    <h3>{post.node.title}</h3>
+                  <div key={post.databaseId} className="p-4">
+                    <h3 className="post_title">{post.node.title}</h3>
                   </div>
                 </a>
               </Link>
