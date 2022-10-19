@@ -215,6 +215,34 @@ h2 .rank-no-1 {
     }
 }
 
+@media screen and (max-width: 372px) {
+
+    h1 .your,
+    h1 .local {
+        font-size: 2.8rem;
+    }
+
+    h1 .las-vegas {
+        font-size: 3.2rem;
+    }
+
+    h1 .seo-experts {
+        font-size: 2.6rem;
+    }
+
+    h2.splash-h2 {
+        line-height: 54px;
+    }
+
+    h2 .we-help-you {
+        font-size: 2.5rem;
+    }
+
+    h2 .rank-no-1 {
+        font-size: 3.0rem;
+    }
+}
+
 @media screen and (min-width: 2180px) {
     h1 .your {
         font-size: 100px;
@@ -320,6 +348,7 @@ h2 .rank-no-1 {
         width: 100%;
         height: 100%;
         transition: all ease-out .3s;
+        will-change: transform
     }
 }
 
