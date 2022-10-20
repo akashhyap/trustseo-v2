@@ -21,6 +21,10 @@ export const getPageStaticProps = async (context) => {
                 sourceUrl
               }
             }
+            seo {
+              title
+              metaDesc
+            }
           }
           ... on Post {
             id
@@ -31,6 +35,10 @@ export const getPageStaticProps = async (context) => {
               node {
                 sourceUrl
               }
+            }
+            seo {
+              title
+              metaDesc
             }
           }
         }
@@ -100,8 +108,11 @@ export const getPageStaticProps = async (context) => {
     },
   });
 
+  const seo = data.nodeByUri.seo;
+
   const blocks = await cleanAndTransformBlocks(data.nodeByUri.blocksJSON);
   const topMenu = data.headerMenus;
+
   const footerMenus = data.footerMenus;
 
   const content = data.nodeByUri.content;
@@ -110,7 +121,8 @@ export const getPageStaticProps = async (context) => {
   const siteLogo = data.acfOptionsMainMenu.menuOptions.siteLogo;
   const homePageIntro = data.acfOptionsMainMenu.menuOptions.homepageIntroText;
   const homePageImage = data.acfOptionsMainMenu.menuOptions.homepageIntroImage;
-  const homePageImageAdvance = data.acfOptionsMainMenu.menuOptions.homePageImageAdvance;
+  const homePageImageAdvance =
+    data.acfOptionsMainMenu.menuOptions.homePageImageAdvance;
   const freeConsultationLabel =
     data.acfOptionsMainMenu.menuOptions.freeConsultationLabel;
   const freeConsultationLink =
@@ -120,6 +132,7 @@ export const getPageStaticProps = async (context) => {
 
   return {
     props: {
+      seo,
       siteLogo,
       featuredImage,
       homePageIntro,
@@ -131,7 +144,7 @@ export const getPageStaticProps = async (context) => {
       content,
       topMenu,
       footerMenus,
-      latestPosts
+      latestPosts,
     },
   };
 };

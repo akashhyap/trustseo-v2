@@ -12,7 +12,7 @@ export const PostArchive = () => {
       {!!posts &&
         posts.edges.map((post, index) => {
           return (
-            <>
+            <div key={index} className="post-card">
               <Link href={post.node.uri} passHref>
                 <a className="p-5">
                   <div className="relative aspect-video">
@@ -28,7 +28,7 @@ export const PostArchive = () => {
                   </div>
                 </a>
               </Link>
-            </>
+            </div>
           );
         })}
     </div>
