@@ -44,11 +44,11 @@ export const Homepage = ({ data }) => {
           <div className="container mx-auto px-10 flex flex-row justify-between">
             <div className="mt-8 md:mt-0 mb-10 basis-full md:basis-1/2 max-w-full md:max-w-[40%] self-center text-center md:text-justify">
               <div
-                className="mb-10"
+                className="mb-8 lg:mb-10"
                 dangerouslySetInnerHTML={{ __html: data.homePageIntro }}
               ></div>
               <Link href={data.freeConsultationLink.uri} passHref>
-                <a className="text-[18px] md:text-[22px] inline-flex items-center bg-transparent transition-all duration-150 hover:bg-slate-800 text-white-700 hover:text-white py-4 px-4 border border-white-500 hover:border-transparent rounded">
+                <a className="text-[17px] lg:text-[22px] inline-flex items-center text-left bg-transparent transition-all duration-150 hover:bg-slate-800 text-white-700 hover:text-white py-4 px-2 lg:px-4 border border-white-500 hover:border-transparent rounded">
                   {data.freeConsultationLabel}{" "}
                   <span className="ml-2">
                     <FaArrowRight />

@@ -187,6 +187,34 @@ h2 .rank-no-1 {
     text-transform: uppercase;
 }
 
+@media screen and (max-width: 1023px) {
+
+    h1 .your,
+    h1 .local {
+        font-size: 2.3rem;
+    }
+
+    h1 .las-vegas {
+        font-size: 2.65rem;
+    }
+
+    h1 .seo-experts {
+        font-size: 2.16rem;
+    }
+
+    h2.splash-h2 {
+        line-height: 44px;
+    }
+
+    h2 .we-help-you {
+        font-size: 2.05rem;
+    }
+
+    h2 .rank-no-1 {
+        font-size: 2.5rem;
+    }
+}
+
 @media screen and (max-width: 767px) {
 
     h1 .your,
@@ -339,12 +367,12 @@ h2 .rank-no-1 {
     align-items: center;
 }
 
-@media screen and (max-width:787px) {
+@media screen and (max-width:767px) {
     .menu_wrapper {
         position: fixed;
         top: 0;
         left: 0;
-        background: #1e293be6;
+        background: #1e293bf2;
         width: 100%;
         height: 100%;
         transition: all ease-out .3s;
@@ -364,6 +392,24 @@ h2 .rank-no-1 {
 
 .scroll_style .menu_item a {
     transition: all ease-out .3s;
+}
+
+@media screen and (max-width:767px) {
+    .scroll_style .menu_item a {
+        position: relative;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .scroll_style .menu_item a:after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 1px;
+        background: #c32129;
+        display: block;
+        left: 22px;
+    }
 }
 
 .scroll_style_after .menu_item a {
@@ -396,8 +442,8 @@ h2 .rank-no-1 {
     .company_logos>div {
         flex-wrap: wrap;
         flex: 1;
-        margin-bottom: 0!important;
-        padding: 15px!important;
+        margin-bottom: 0 !important;
+        padding: 15px !important;
     }
 }
 
@@ -429,9 +475,11 @@ h2 .rank-no-1 {
         font-size: 28px;
     }
 }
+
 .p-line-height-lg {
     line-height: 40px;
 }
+
 .home-content p.margin-custom {
     margin-top: 30px;
 }
