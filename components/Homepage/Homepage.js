@@ -29,7 +29,7 @@ export const Homepage = ({ data }) => {
   return (
     <>
       <div className="homepage">
-        <header className="header">
+        <header className="header max-h-[80vh] overflow-hidden">
           <div
             className={`scroll_style ${
               stateNavbar ? "scroll_style_after" : ""
@@ -41,10 +41,10 @@ export const Homepage = ({ data }) => {
               menu={data.topMenu}
             />
           </div>
-          <div className="container mx-auto px-10 flex flex-row justify-between">
+          <div className="container mx-auto px-10 flex flex-row justify-between items-end">
             <div className="mt-8 md:mt-0 mb-10 basis-full md:basis-1/2 max-w-full md:max-w-[40%] self-center text-center md:text-justify">
               <div
-                className="mb-8 lg:mb-10"
+                className="mb-8 md:my-8"
                 dangerouslySetInnerHTML={{ __html: data.homePageIntro }}
               ></div>
               <Link href={data.freeConsultationLink.uri} passHref>
