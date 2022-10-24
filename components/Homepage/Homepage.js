@@ -29,7 +29,7 @@ export const Homepage = ({ data }) => {
   return (
     <>
       <div className="homepage">
-        <header className="header max-h-[80vh] overflow-hidden">
+        <header className="header max-h-max">
           <div
             className={`scroll_style ${
               stateNavbar ? "scroll_style_after" : ""
@@ -62,8 +62,8 @@ export const Homepage = ({ data }) => {
                 alt="header image"
                 src={data.homePageImage.sourceUrl}
                 layout="responsive"
-                width={610}
-                height={648}
+                width={500}
+                height={538}
                 loading="lazy"
               />
             </div>
