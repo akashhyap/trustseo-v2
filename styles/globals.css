@@ -15,6 +15,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
+:root {
+    --font-heading-scale: 0.9090909090909091;
+}
+
 html,
 body {
     overflow-x: hidden;
@@ -119,7 +124,7 @@ h2.splash-h2 {
 
 h1 .your,
 h1 .local {
-    font-size: 9vw;
+    font-size: calc(var(--font-heading-scale) * 3rem);
 }
 
 h1 .local {
@@ -128,94 +133,53 @@ h1 .local {
 }
 
 h1 .las-vegas {
-    font-size: 10vw;
+    font-size: calc(var(--font-heading-scale) * 3.4rem);
 }
 
 h1 .seo-experts {
-    font-size: 8.2vw;
+    font-size: calc(var(--font-heading-scale) * 2.75rem);
     text-decoration-line: underline;
     text-decoration-color: #fcd832;
 }
 
 h2 .we-help-you {
-    font-size: 7.8vw;
+    font-size: calc(var(--font-heading-scale) * 2.65rem);
 }
 
 h2 .rank-no-1 {
-    font-size: 9.5vw
+    font-size: calc(var(--font-heading-scale) * 3.2rem);
 }
 
-@media screen and (min-width:530px) {
+
+@media screen and (min-width:992px) {
 
     h1 .your,
     h1 .local {
-        font-size: calc(5.2vw + 6 * ((100vw - 320px) / 680));
+        font-size: calc(var(--font-heading-scale) * 4rem);
     }
 
-    h1 .las-vegas {
-        font-size: calc(6vw + 6 * ((100vw - 320px) / 680));
-    }
-
-    h1 .seo-experts {
-        font-size: calc(4.8vw + 6 * ((100vw - 320px) / 680));
-    }
-
-    h2 .we-help-you {
-        font-size: calc(4.6vw + 6 * ((100vw - 320px) / 680));
-    }
-
-    h2 .rank-no-1 {
-        font-size: calc(5.8vw + 6 * ((100vw - 320px) / 680));
-    }
-}
-
-@media screen and (min-width:768px) {
-
-    h1 .your,
     h1 .local {
-        font-size: calc(4.0vw + 2 * ((100vw - 320px) / 680));
+        text-decoration-line: underline;
+        text-decoration-color: #fcd832;
     }
 
     h1 .las-vegas {
-        font-size: calc(4.6vw + 2 * ((100vw - 320px) / 680));
+        font-size: calc(var(--font-heading-scale) * 4.6rem);
     }
 
     h1 .seo-experts {
-        font-size: calc(3.7vw + 2 * ((100vw - 320px) / 680));
+        font-size: calc(var(--font-heading-scale) * 3.74rem);
     }
 
     h2 .we-help-you {
-        font-size: calc(3.5vw + 2 * ((100vw - 320px) / 680));
+        font-size: calc(var(--font-heading-scale) * 3.55rem);
     }
 
     h2 .rank-no-1 {
-        font-size: calc(4.3vw + 2 * ((100vw - 320px) / 680));
+        font-size: calc(var(--font-heading-scale) * 4.3rem);
     }
 }
 
-@media screen and (min-width:1025px) {
-
-    h1 .your,
-    h1 .local {
-        font-size: calc(3.0vw + 2 * ((100vw - 320px) / 680));
-    }
-
-    h1 .las-vegas {
-        font-size: calc(3.5vw + 2 * ((100vw - 320px) / 680));
-    }
-
-    h1 .seo-experts {
-        font-size: calc(2.8vw + 2 * ((100vw - 320px) / 680));
-    }
-
-    h2 .we-help-you {
-        font-size: calc(2.65vw + 2 * ((100vw - 320px) / 680));
-    }
-
-    h2 .rank-no-1 {
-        font-size: calc(3.25vw + 2 * ((100vw - 320px) / 680));
-    }
-}
 
 .header_intro_txt {
     padding-top: 100px;
