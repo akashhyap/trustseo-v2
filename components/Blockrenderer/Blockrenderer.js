@@ -5,6 +5,7 @@ import { Columns } from "components/Columns";
 import { Column } from "components/Column";
 import Image from "next/image";
 import { PostArchive } from "components/PostArchive";
+import { FormspreeForm } from "components/FormspreeForm";
 
 export const Blockrenderer = ({ blocks }) => {
   // console.log("blocks==>", blocks);
@@ -89,6 +90,9 @@ export const Blockrenderer = ({ blocks }) => {
       }
       case "acf/postarchive": {
         return <PostArchive key={block.id} />;
+      }
+      case "acf/formspreeform": {
+        return <FormspreeForm key={block.id} formId={block.attributes.data.form_id} />;
       }
 
       default:

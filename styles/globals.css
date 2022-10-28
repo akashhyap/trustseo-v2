@@ -368,3 +368,19 @@ h2 .rank-no-1 {
     font-size: 1.5rem;
     line-height: 2rem;
 }
+.form_wrap {
+    max-width: 60%;
+    margin: 3rem auto 1rem;
+    padding: 2rem 3rem 3rem;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 4px 10px 3px rgb(145 145 145 / 30%);
+}
+@media screen and  (max-width:767px) {
+    .form_wrap {
+        max-width: 95%;
+    }
+}
+.input_form {
+    border: 1px solid #ddd;
+}
