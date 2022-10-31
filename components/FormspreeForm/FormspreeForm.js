@@ -23,12 +23,10 @@ export const FormspreeForm = ({ formId }) => {
   const handleOnSubmit = (values, actions) => {
     axios({
       method: "POST",
-      url: `https://formspree.io/forms/${formId}/submissions`,
-      data: JSON.stringify(values),
+      url: `https://formspree.io/f/${formId}`,
+      data: values,
       config: {
         headers: {
-          "Accept":"application/json",
-          "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*",
         },
       },
@@ -36,11 +34,11 @@ export const FormspreeForm = ({ formId }) => {
       .then((response) => {
         actions.setSubmitting(false);
         actions.resetForm();
-        handleServerResponse(true, "Thanks!");
+        handleServerResponse(true, `Thank You. Form is submitted successfully. We will get back to you shortly!`);
       })
       .catch((error) => {
         actions.setSubmitting(false);
-        handleServerResponse(false, "Error");
+        handleServerResponse(false, error.response.data.error);
       });
   };
 
@@ -100,7 +98,7 @@ export const FormspreeForm = ({ formId }) => {
             </span>
           </button>
           {serverState && (
-            <p className={!serverState.ok ? "errorMsg" : ""}>
+            <p className={!serverState.ok ? "errorMsg" : "successMsg"}>
               {serverState.msg}
             </p>
           )}
