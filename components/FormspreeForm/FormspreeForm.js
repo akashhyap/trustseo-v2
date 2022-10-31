@@ -23,7 +23,7 @@ export const FormspreeForm = ({ formId }) => {
   const handleOnSubmit = (values, actions) => {
     axios({
       method: "POST",
-      url: `http://formspree.io/forms/${formId}/submissions`,
+      url: `https://formspree.io/forms/${formId}/submissions`,
       data: values,
       config: {
         headers: {
