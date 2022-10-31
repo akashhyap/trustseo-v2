@@ -24,9 +24,11 @@ export const FormspreeForm = ({ formId }) => {
     axios({
       method: "POST",
       url: `https://formspree.io/forms/${formId}/submissions`,
-      data: values,
+      data: JSON.stringify(values),
       config: {
         headers: {
+          "Accept":"application/json",
+          "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*",
         },
       },
@@ -44,7 +46,7 @@ export const FormspreeForm = ({ formId }) => {
 
   return (
     <Formik
-      initialValues={{ fname: "", email: "", message: "" }}
+      initialValues={{ email: "",fname: "", message: "" }}
       onSubmit={handleOnSubmit}
       validationSchema={formSchema}
     >
