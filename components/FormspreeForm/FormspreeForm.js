@@ -21,8 +21,10 @@ export const FormspreeForm = ({ formId }) => {
             type="fname"
             name="fname"
             className="mt-1 block w-full rounded-md input_form"
+            required
           />
-          <ValidationError prefix="fname" field="fname" errors={state.errors} />
+          <ValidationError field="fname" errors={state.errors} />
+           
         </div>
         <div className="col-span-6 sm:col-span-3">
           <label
@@ -37,7 +39,7 @@ export const FormspreeForm = ({ formId }) => {
             name="lname"
             className="mt-1 block w-full rounded-md input_form"
           />
-          <ValidationError prefix="lname" field="lname" errors={state.errors} />
+        
         </div>
         <div className="col-span-6 sm:col-span-6">
           <label
@@ -51,24 +53,25 @@ export const FormspreeForm = ({ formId }) => {
             type="email"
             name="email"
             className="mt-1 block w-full rounded-md input_form"
+            required
           />
-          <ValidationError prefix="Email" field="email" errors={state.errors} />
+          
         </div>
         <div className="col-span-6 sm:col-span-6">
           <label
-            htmlFor="message"
+            htmlFor="c_message"
             className="block text-sm text-gray-700"
           >
             Message
           </label>
           <textarea
-            id="message"
-            name="message"
+            id="c_message"
+            name="c_message"
             className="mt-1 block w-full rounded-md input_form"
           />
           <ValidationError
-            prefix="Message"
-            field="message"
+            prefix="c_message"
+            field="c_message"
             errors={state.errors}
           />
         </div>
@@ -80,6 +83,7 @@ export const FormspreeForm = ({ formId }) => {
       >
         Submit
       </button>
+      <ValidationError errors={state.errors} />
     </form>
   );
 };

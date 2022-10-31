@@ -29,7 +29,7 @@ export const Homepage = ({ data }) => {
   return (
     <>
       <div className="homepage">
-        <header className="header max-h-max">
+        <header className="header">
           <div
             className={`scroll_style ${
               stateNavbar ? "scroll_style_after" : ""
@@ -41,8 +41,8 @@ export const Homepage = ({ data }) => {
               menu={data.topMenu}
             />
           </div>
-          <div className="container mx-auto px-10 flex flex-row justify-between items-end">
-            <div className="mt-8 md:mt-0 mb-10 basis-full md:basis-1/2 max-w-full md:max-w-[40%] self-center text-center md:text-justify">
+          <div className="container mx-auto px-10 flex flex-row justify-between items-end h-[75vh]">
+            <div className="basis-full lg:basis-2/5 self-center text-center lg:text-justify">
               <div
                 className="mb-8 md:my-8"
                 dangerouslySetInnerHTML={{ __html: data.homePageIntro }}
@@ -57,15 +57,22 @@ export const Homepage = ({ data }) => {
               </Link>
             </div>
 
-            <div className="basis-1/2 relative hidden md:block">
-              <Image
+            <div
+              className="flex-1 relative hidden lg:block h-full header__bgimg"
+              style={{
+                background: `url(${data.homePageImage.sourceUrl})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center bottom",
+              }}
+            >
+              {/* <Image
                 alt="header image"
                 src={data.homePageImage.sourceUrl}
                 layout="responsive"
-                width={500}
-                height={538}
+                width={13}
+                height={15}
                 loading="lazy"
-              />
+              /> */}
             </div>
           </div>
         </header>
